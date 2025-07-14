@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+}
+
+.tenzies {
+  border: 10px solid #4169E1; /* Dodger Blue: modern and vibrant */
+  width: calc(100vw - 40px);  /* 20px margin on left + right */
+  height: calc(100vh - 40px); /* 20px margin on top + bottom */
+  margin: 20px;               /* equal margin on all sides */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;        /* optional: makes it look clean */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle depth */
+}
+
+.die {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #4169E1; /* Royal Blue */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.die:hover {
+  background-color: #4169E1;
+  color: white;
+  transform: scale(1.05);
+}
+.dice-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  max-width: 400px; /* 5 dice * 60px + 4*16px gap = 340px */
+}
+
+.die {
+  flex: 0 0 60px;
+}
+
+.dice-container > .die:nth-child(6) {
+  clear: both;
+}
+
+
+/* heading */
+.tenzies-header {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #27408B; /* deeper blue for contrast */
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(65, 105, 225, 0.08);
+  transition: color 0.2s;
+}
+
+.tenzies-header span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  opacity: 0.92;
+}
+
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* die button */
+.roll-dice {
+  padding: 12px 32px;
+  background-color: #4169E1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(65, 105, 225, 0.15);
+  transition: background 0.2s, transform 0.15s;
+  outline: none;
+
+}
+
+.roll-dice:hover,
+.roll-dice:focus {
+  background-color: #27408B;
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+/* footer */
+.app-footer {
+  width: calc(100% - 40px);
+  margin: 0 20px 20px 20px;
+  padding: 16px 0;
+  background-color: #4169E1;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 0px 8px rgba(30, 144, 255, 0.08);
+  letter-spacing: 0.5px;
+  border-radius: 0 0 10px 10px;
+}
+
+.app-footer p {
+  margin: 0;
+}
